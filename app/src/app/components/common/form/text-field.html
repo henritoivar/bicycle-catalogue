@@ -1,0 +1,17 @@
+<div class="form-group" ng-class="{'has-error' : form[field].$invalid && (form.$submitted || form[field].$dirty)}">
+    <label for="{{:: field }}"
+           class="control-label">{{:: label }}</label>
+    <textarea ng-model="ngModel"
+           name="{{:: field }}"
+           id="{{:: field }}"
+           class="form-control"
+           placeholder="{{:: placeholder }}"
+           ng-required="required"
+    ></textarea>
+    <div ng-messages="form[field].$error"
+         ng-show="form.$submitted || form[field].$touched"
+         class="help-block">
+        <div ng-message="required">Field is required</div>
+        <div ng-message="email">Not valid email</div>
+    </div>
+</div>

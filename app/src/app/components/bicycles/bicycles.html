@@ -1,0 +1,24 @@
+<h1>List of bicycles</h1>
+
+<a href="#/app/bicycles/new" class="btn btn-default">Add new bicycle</a>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Weight</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="bicycle in $ctrl.Bicycles.collection">
+        <td>{{ bicycle.name }}</td>
+        <td>{{ bicycle.brand }}</td>
+        <td>{{ bicycle.weight }}</td>
+        <td>{{ bicycle.price }}</td>
+        <td><a href="#/app/bicycles/{{ bicycle.id }}" class="btn btn-primary btn-xs">Edit</a></td>
+    </tr>
+    </tbody>
+</table>

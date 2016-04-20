@@ -1,0 +1,43 @@
+<h1>Bicycle overview</h1>
+<form name="details" ng-submit="details.$valid && $ctrl.save()" novalidate>
+
+    <input-field ng-model="$ctrl.Bicycles.item.name"></input-field>
+    <input-field ng-model="$ctrl.Bicycles.item.brand"></input-field>
+
+    <h2>Parts</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Weight</th>
+            <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="part in $ctrl.Bicycles.item.bicycle_parts">
+            <td>
+                <input-field ng-model="part.name"></input-field>
+            </td>
+            <td>
+                <input-field ng-model="part.weight" type="number" placeholder="Weight (grams)"></input-field>
+            </td>
+            <td>
+                <input-field ng-model="part.price"></input-field>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    Total weight: {{ $ctrl.Bicycles.getItemTotalWeight() }} g
+    <br>Total price: {{ $ctrl.Bicycles.getItemTotalPrice() | currency: '€' }}
+
+    <button type="button" ng-click="$ctrl.newPart()" class="btn btn-info pull-right">Add new part</button>
+    <div class="clearfix"></div>
+    <hr>
+    <button ng-click="$ctrl.delete()"
+
+            class="btn btn-danger" type="button">Delete
+    </button>
+    <button type="submit"
+            class="btn btn-primary">Save
+    </button>
+</form>

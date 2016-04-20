@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1"/>
+    <title>Bicycle Catalogue</title>
+
+    <!-- Google Roboto Font -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="lib/angular-toastr/dist/angular-toastr.css" />
+    <!-- endbower -->
+
+    <!-- Inject all source code here automatically -->
+    <!-- include: "type": "css", "files": ["app/assets/**/*.css"] -->
+    <link href="app/assets/main.css" rel="stylesheet" type="text/css">
+    <!-- /include -->
+
+</head>
+<body ng-app="app">
+
+<div ui-view></div>
+
+<!-- bower:js -->
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="lib/angular-messages/angular-messages.js"></script>
+<script src="lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+<script src="lib/angular-resource/angular-resource.js"></script>
+<!-- endbower -->
+
+<!-- Inject all source code here automatically -->
+<!-- include: "type": "js", "files": ["app/**/*.module.js", "app/**/*.js"] -->
+<script src="app/components/bicycles/bicycles.module.js"></script>
+<script src="app/components/common/form/form.module.js"></script>
+<script src="app/components/main/main.module.js"></script>
+<script src="app/components/main/navbar/navbar.module.js"></script>
+<script src="app/config/exception/exception.module.js"></script>
+<script src="app/app.js"></script>
+<script src="app/components/bicycles/bicycle.component.js"></script>
+<script src="app/components/bicycles/bicycles.component.js"></script>
+<script src="app/components/bicycles/bicycles.model.js"></script>
+<script src="app/components/bicycles/bicycles.resource.js"></script>
+<script src="app/components/bicycles/bicycles.routes.js"></script>
+<script src="app/components/common/form/input-field.component.js"></script>
+<script src="app/components/common/form/text-field.component.js"></script>
+<script src="app/components/common/modal/modal.service.js"></script>
+<script src="app/components/common/promise.service.js"></script>
+<script src="app/components/common/range.filter.js"></script>
+<script src="app/components/common/toast.service.js"></script>
+<script src="app/components/main/main.component.js"></script>
+<script src="app/components/main/main.routes.js"></script>
+<script src="app/components/main/navbar/navbar.component.js"></script>
+<script src="app/config/config.js"></script>
+<script src="app/config/exception/exception-handler.js"></script>
+<script src="app/config/resource.js"></script>
+<script src="app/config/router.js"></script>
+<!-- /include -->
+</body>
+</html>
